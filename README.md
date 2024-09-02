@@ -19,9 +19,9 @@ The project addresses several significant social issues. It enhances accessibili
 
 **2. Motivation**
 
-This project is carried out as an effort to help music enthusiasts and individuals passionate about creative expression, particularly those facing physical disabilities or challenges. I am inspired by people like Đặng Ngọc Duy, a blind teacher who loves music. Despite losing fingers in an accident, he plays the guitar with incredible skill. His story shows how technology can help anyone make music, no matter their physical challenges. EMusicPulse aims to make music accessible to everyone, just like Duy, by using special technology that turns muscle movements into music. I want to show that anyone can express themselves through music, and that technology can help make that possible. Duy's story show that with determination and the right tools, anything is possible, and I want to share that message with the world through this project.
+This project, inspired by people like Đặng Ngọc Duy - a blind teacher who loves music, is carried out as an effort to help music enthusiasts and individuals passionate about creative expression, particularly those facing physical disabilities or challenges. Despite losing fingers in an accident, he plays the guitar with incredible skill. His story shows how technology can help anyone make music, no matter their physical challenges. EMusicPulse aims to make music accessible to everyone, just like Duy, by using special technology that turns muscle movements into music. The aim is to demonstrate that music can be a means of self-expression for anyone, facilitated by technology. Duy's story illustrates that with determination and the appropriate tools, anything can be achieved, and the intention is to disseminate that message globally through this project.
 ![image](https://github.com/dngvmnh/EMusicPulse/assets/133772077/8a96e70f-126a-4bc6-b17f-58bb7a1b06fc)
-_Image 1. Đặng Ngọc Duy, a blind teacher and music enthusiast, skillfully playing the guitar with a three-fingered hand after an explosive accident._
+<p align=center><em>Image 1. Đặng Ngọc Duy, a blind teacher and music enthusiast, skillfully playing the guitar with a three-fingered hand after an explosive accident.</em></p>
 
 ## Implementation
 
@@ -29,26 +29,26 @@ The implementation of this project includes three main stages: setup Arduino com
 
 ● System design:
 ![system design](https://github.com/dngvmnh/EMusicPulse/assets/133772077/10853052-1546-47bf-9715-01d42129c3fc)
-_Image 2. System design._
+<p align=center><em>Image 2. System design.</em></p>
 
 
-● We used an Arduino Uno to controll to system; EMG A10-09 sensor to obtain electromyographic signals; a potentiometer to change between modes; and a speaker to play sounds and effects.
+● An Arduino Uno was used to controll to system; EMG A10-09 sensor to obtain electromyographic signals; a potentiometer to change between modes; and a speaker to play sounds and effects.
 
 ● There are two main programs for this project: obtaining signals, processing signals, and displaing on web. Arduino Uno and host device communicate through the serial port. multilayered background musics and sound effects (bass, drum, kick, chord) are joined by multi-threading. 
 
-● Given the quality of the EMG sensor and the signal noises, the signals' precision is not as accurate as we desired when measuring the muscle groups at the forearm while closing the hand. To enhance signal accuracy, electrodes were strategically positioned at the wrist, one end of the bicep, and the midpoint of the bicep (biceps brachii). Given the biceps' significant size within the arm muscle group, this placement ensures more reliable data capture.
+● Given the quality of the EMG sensor and the signal noises, the signals' precision is not perfectly accurate when measuring the muscle groups at the forearm while closing the hand. To enhance signal accuracy, electrodes were strategically positioned at the wrist, one end of the bicep, and the midpoint of the bicep (biceps brachii). Given the biceps' significant size within the arm muscle group, this placement ensures more reliable data capture.
 
 
 ●  The User Interface (UI) is designed as follow:
 ![image](https://github.com/dngvmnh/EMusicPulse/assets/133772077/daa5135d-e520-4e14-b453-8d9ec509bf34)
-_Image 3. User Interface._
+<p align=center><em>Image 3. User Interface.</em></p>
 
 The EMG Signal Dashboard web application serves as an interactive interface for monitoring real-time data received from an EMG sensor connected to an Arduino. This dashboard displays the latest EMG values, the current effect being applied, and the mode in which the system is operating. It fetches updated data from the Flask server at regular intervals, providing users with a dynamic and current view of the EMG signals and system status. This setup is particularly useful for immediate feedback and visualization of EMG data, such as in biofeedback therapy, muscle activity monitoring, and interactive audio-visual systems.
 
 
 ## Results and discussion
 
-We have successfully deployed a system that enables music, rhythm and melody creation as well as plaing musics with a price range of $48 to $68. This result fits the initial scope of this project. However, the EMG signals exhibit a notable delay in responsiveness, which complicates the analysis process due to inherent imprecision. This lag in signal processing poses challenges in accurately interpreting and evaluating muscle activity dynamics. As a result, meticulous attention must be paid to mitigating these limitations through advanced signal processing techniques and calibration methodologies to ensure the fidelity of data analysis and interpretation. Moreover, the initial setup process for the product lacks optimization, as it necessitates the use of a host laptop and the configuration of multi-threading code scripts. This procedural hurdle can be effectively addressed by integrating a WiFi module into the system, enabling direct transmission of data to the web without the dependency on a host laptop. By leveraging this wireless capability, the product can streamline its setup procedure, enhancing user convenience and eliminating the need for additional hardware components. Future research should focus on resolving these proposed issues.
+A system that enables music, rhythm and melody creation as well as playing musics was successfully deployed with a price range of $48 to $68. This result fits the initial scope of this project. However, the EMG signals exhibit a notable delay in responsiveness, which complicates the analysis process due to inherent imprecision. This lag in signal processing poses challenges in accurately interpreting and evaluating muscle activity dynamics. As a result, meticulous attention must be paid to mitigating these limitations through advanced signal processing techniques and calibration methodologies to ensure the fidelity of data analysis and interpretation. Moreover, the initial setup process for the product lacks optimization, as it necessitates the use of a host laptop and the configuration of multi-threading code scripts. This procedural hurdle can be effectively addressed by integrating a WiFi module into the system, enabling direct transmission of data to the web without the dependency on a host laptop. By leveraging this wireless capability, the product can streamline its setup procedure, enhancing user convenience and eliminating the need for additional hardware components. Future research should focus on resolving these proposed issues.
 
 Images and videos of this product can be found here: [Media](https://github.com/dngvmnh/EMusicPulse/tree/main/Media).
 
